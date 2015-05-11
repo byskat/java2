@@ -62,6 +62,24 @@ public final class Equips {
     }
     
     /**
+     * Es primer comprova si es troba, o no a la primera posició.
+     * @return
+     * @throws SQLException
+     */
+    public boolean esPrimer() throws SQLException{
+        return rs.isFirst();
+    }
+    
+    /**
+     * Es ultim comprova si es troba, o no a la ultima posició.
+     * @return
+     * @throws SQLException
+     */
+    public boolean esUltim() throws SQLException{
+        return rs.isLast();
+    }
+    
+    /**
      * Va a l'anterior, si hi es, si queda.
      * @return
      * @throws SQLException
@@ -149,11 +167,14 @@ public final class Equips {
      * Elimina l'equip que es troba al cursor del result set.
      * @throws SQLException
      */
-    public void eliminarEquip() throws SQLException{
+    public boolean eliminarEquip() throws SQLException{
+        boolean res=false;
         if (this.actual()!=null){
             rs.moveToCurrentRow();
             rs.deleteRow();
+            res=true;
         }
+        return res;
     }
     
     /**
@@ -165,4 +186,27 @@ public final class Equips {
         this.buscar(id);
         this.eliminarEquip();
     }
+    
+    /**
+     * Només executa obtenirEquips, que recarrega el resultset.
+     * @throws SQLException
+     */
+    public void refrescar() throws SQLException{
+        this.rs = this.obtenirEquips();
+    }
+    
+    /**
+     * Funció actualitzar equip, que rep un equip i actualitza el que coincideixi
+     * amb la mateixa id.
+     * @param eq
+     * @throws SQLException
+     */
+    public void actualitzarEquip(Equip eq) throws SQLException{
+        rs.updateString(Equip.E_NOM, eq.getEq_nom());
+        rs.updateString(Equip.E_ESTADI, eq.getEstadi());
+        rs.updateString(Equip.E_POBLACIO, eq.getPoblacio());
+        rs.updateString(Equip.E_COD_POSTAL, eq.getCod_postal());
+        rs.updateRow();
+    }
+    
 }

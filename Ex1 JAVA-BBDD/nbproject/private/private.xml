@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/Jugadors.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/Ex1JAVABBDD.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/Equip.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/JavaConnection.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/Jugador.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/bbdd/Equips.java</file>
+            <file>file:/media/HP%20Portable%20Drive/Netbeans/Ex1%20JAVA-BBDD/src/ex1/java/forms/frmEquips.java</file>
+        </group>
     </open-files>
 </project-private>

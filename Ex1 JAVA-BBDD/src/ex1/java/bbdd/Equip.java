@@ -97,11 +97,26 @@ public class Equip {
     }
     
     /**
+     * Metode que rep un equip i el compara amb l'actual, retorna true si son iguals.
+     * @param eq
+     * @return
+     */
+    public boolean comparador(Equip eq){
+        boolean res = false;
+        
+        if(this.eq_nom.equals(eq.eq_nom) && this.estadi.equals(eq.estadi) && this.poblacio.equals(eq.poblacio) && this.cod_postal.equals(eq.cod_postal)){
+            res = true;
+        }
+        
+        return res;
+    }
+    
+    /**
      * Funcio que crea l'sql que seleciona tot el contingut.
      * @return
      */
     public static String createQuery(){
-        return Equip.SELECT_ALL;
+        return Equip.SELECT_ALL+" ORDER BY "+Equip.E_ID+" ASC";
     }
 
     /**
